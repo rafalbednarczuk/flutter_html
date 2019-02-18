@@ -1578,7 +1578,9 @@ class HtmlOldParser extends StatelessWidget {
           return Expanded(
             flex: node.nodes.isEmpty ? 0 : colspan,
             child: Wrap(
-              crossAxisAlignment: WrapCrossAlignment.center,
+              alignment: WrapAlignment.end,
+              runAlignment: WrapAlignment.end,
+              crossAxisAlignment: WrapCrossAlignment.end,
               children: _parseNodeList(node.nodes),
             ),
           );
