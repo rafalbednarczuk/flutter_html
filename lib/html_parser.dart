@@ -1576,7 +1576,7 @@ class HtmlOldParser extends StatelessWidget {
             colspan = int.tryParse(node.attributes['colspan']);
           }
           return Expanded(
-            flex: colspan,
+            flex: node.nodes.isEmpty ? 0 : colspan,
             child: Wrap(
               crossAxisAlignment: WrapCrossAlignment.center,
               children: _parseNodeList(node.nodes),
